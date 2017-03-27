@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+{% block stylesheet %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/home_page.css' %}" >
+{% endblock %}
+
+<div class="nav">
+<h1 class="logo">Quotiyapa</h1>
+<p class="welcome-user">Hello <a href="/profile/{{ user.username}}">{{ user.username }}</a>
+</p>
+</div>
+     {% for i in quotes %}
+        <div class="quote-block">
+         <div class="quote-block-header">
+         <img src="{% static 'images/user_icon.png' %}" class="user-icon">
+         <p>Posted by <a href="/profile/{{ i.user}}" class="user-link">{{ i.user }}</a>
+         </div></p>
+         
+        <p class="quote-text">{{ i.quotes }}<small> -{{ i.author}}</small></p>
+        </div>
+     {% endfor %}
+{% endblock content%}

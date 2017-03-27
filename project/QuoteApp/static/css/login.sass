@@ -1,0 +1,61 @@
+@import 'vars.sass'
+
+body
+	background-color: $theme-color
+.login-form
+  margin-left: calc(50% - 150px)
+  margin-right: calc(50% - 150px)
+  margin-top: calc(50vh - 143px)
+  @media screen and (max-width: $smart-phone-lg)
+  	margin-left: 0px
+  	margin-right: 0px
+  	margin-top: 40px
+
+.login-form-header
+  background-color: #111
+  color: #fff
+  font-size: 24px
+  width: 300px
+  text-align: center
+  padding: 15px
+  border: 1px solid #111
+  border-radius: 5px 5px 0 0
+  border-bottom: 0
+  margin-bottom: 0px
+
+.login-form-body
+  background-color: #fff
+  color: #111
+  border: 1px solid #111
+  border-top: 0
+  width: 300px
+  padding: 15px
+  margin-top: 0px
+  label
+    display: block
+  input
+    width: 100%
+    font-size: 24px
+    font-weight: bold
+
+.submit-btn
+  background-color: #111
+  color: #fff
+  border: 2px solid #111
+  padding: 7px
+  border-radius: 3px
+  cursor: pointer
+  transition: 0.2s ease-in-out
+  &:hover
+    background-color: #fff
+    color: $theme-color
+
+
+ul.errorlist
+  li
+    list-style: none
+    color: red
+    opacity: 0.6
+
+.helptext
+  display: none

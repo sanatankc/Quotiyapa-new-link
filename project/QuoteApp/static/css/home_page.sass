@@ -1,0 +1,40 @@
+@import 'vars.sass'
+body
+  margin: 0px
+
+.logo
+  display: inline-block
+
+.nav
+  display: block
+  background-color: $theme-color
+  margin: 0
+  padding: 10px
+  color: #fff
+
+.quote-block
+  background-color: #fff
+  color: #111
+  border-radius: 5px
+  padding: 10px
+  display: block
+  margin: 10px auto
+  width: 450px
+  border: 2px solid black
+  @media screen and (max-width: $smart-phone-lg)
+    width: auto
+
+.quote-block-header
+  img.user-icon
+      width: 30px
+      border-radius: 50%
+      display: inline-block
+  p
+    display: inline-block
+.welcome-user
+  display: inline-block
+  float: right
+  a
+    color: #fff
+    &:hover
+      border-color: #fff

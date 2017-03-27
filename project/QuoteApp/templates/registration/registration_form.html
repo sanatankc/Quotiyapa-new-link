@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block stylesheet %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" >
+{% endblock %}
+{% block content %}
+<div class="login-form">
+<div class="login-form-header">
+    Create an account.
+    <small> It's free!</small>
+</div>
+<div class="login-form-body">
+<form method="post" action=".">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <input type="submit" class="submit-btn" value="{% trans 'Create an account' %}" />
+</form>
+<p>Already have an account? <a href="{% url 'auth_login' %}">Login</p>
+</div>
+</div>
+{% endblock %}

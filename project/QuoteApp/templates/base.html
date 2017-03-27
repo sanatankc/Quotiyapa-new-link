@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home | Quotiyapa{% endblock title %}</title>
+     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+  {% endblock stylesheet %}
+ 
+  </head> 
+  <body>
+    {% block content%}{% endblock content %}
+    {% block footer %}{% endblock footer %}
+  </body>
+</html>
